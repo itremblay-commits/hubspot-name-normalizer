@@ -2,8 +2,8 @@
   "uid": "normalize-names",
   "type": "workflow-action",
   "config": {
-    "actionUrl": "https://YOUR-APP.vercel.app/api/normalize-names",
-    "published": true,
+    "actionUrl": "https://hubspot-name-normalizer-itremblay-3458s-projects.vercel.app/",
+    "supportedClients": ["WORKFLOWS"]
     "objectTypes": ["CONTACT", "DEAL", "COMPANY", "TICKET"],
     "inputFields": [
       {

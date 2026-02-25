@@ -11,6 +11,7 @@
         "crm.objects.contacts.read",
         "crm.objects.contacts.write"
       ],
+      "permittedUrls": [],
       "optionalScopes": [],
       "conditionallyRequiredScopes": []
     }
