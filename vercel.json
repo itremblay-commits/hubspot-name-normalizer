@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/normalize-names.js": {
+      "runtime": "nodejs20.x"
+    }
+  }
+}

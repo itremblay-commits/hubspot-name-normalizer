@@ -1,0 +1,9 @@
+{
+  "name": "hubspot-name-normalizer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HubSpot custom workflow action: normalizes contact first and last names to proper case.",
+  "engines": {
+    "node": ">=20"
+  }
+}

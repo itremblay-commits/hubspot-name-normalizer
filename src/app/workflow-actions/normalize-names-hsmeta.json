@@ -1,0 +1,72 @@
+{
+  "uid": "normalize-names",
+  "type": "workflow-action",
+  "config": {
+    "actionUrl": "https://YOUR-APP.vercel.app/api/normalize-names",
+    "published": true,
+    "objectTypes": ["CONTACT", "DEAL", "COMPANY", "TICKET"],
+    "inputFields": [
+      {
+        "typeDefinition": {
+          "name": "contactId",
+          "type": "string",
+          "fieldType": "text"
+        },
+        "isRequired": false,
+        "supportedValueTypes": ["STATIC_VALUE", "OBJECT_PROPERTY"]
+      }
+    ],
+    "outputFields": [
+      {
+        "typeDefinition": {
+          "name": "firstNameUpdated",
+          "type": "bool",
+          "fieldType": "booleancheckbox"
+        }
+      },
+      {
+        "typeDefinition": {
+          "name": "lastNameUpdated",
+          "type": "bool",
+          "fieldType": "booleancheckbox"
+        }
+      },
+      {
+        "typeDefinition": {
+          "name": "normalizedFirstName",
+          "type": "string",
+          "fieldType": "text"
+        }
+      },
+      {
+        "typeDefinition": {
+          "name": "normalizedLastName",
+          "type": "string",
+          "fieldType": "text"
+        }
+      }
+    ],
+    "objectRequestOptions": {
+      "properties": ["firstname", "lastname"]
+    },
+    "labels": {
+      "en": {
+        "actionName": "Normalize Contact Name",
+        "actionDescription": "Converts a contact's firstname and lastname to proper case. Intelligently handles O', Mc, Mac, and hyphenated names. Skips the update if the name is already correctly cased.",
+        "actionCardContent": "Normalize contact name",
+        "inputFieldLabels": {
+          "contactId": "Contact ID (optional)"
+        },
+        "inputFieldDescriptions": {
+          "contactId": "The ID of the contact whose name should be normalized. Leave blank when this workflow is enrolled on Contacts — the enrolled contact will be used automatically. Required when enrolled on Deals, Companies, or Tickets: use a property token that holds the associated contact's ID."
+        },
+        "outputFieldLabels": {
+          "firstNameUpdated": "First Name Updated",
+          "lastNameUpdated": "Last Name Updated",
+          "normalizedFirstName": "Normalized First Name",
+          "normalizedLastName": "Normalized Last Name"
+        }
+      }
+    }
+  }
+}
