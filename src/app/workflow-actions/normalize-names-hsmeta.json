@@ -2,8 +2,8 @@
   "uid": "normalize-names",
   "type": "workflow-action",
   "config": {
-    "actionUrl": "https://hubspot-name-normalizer-itremblay-3458s-projects.vercel.app/",
-    "supportedClients": ["WORKFLOWS"]
+    "actionUrl": "https://hubspot-name-normalizer-itremblay-3458s-projects.vercel.app/api/normalize-names",
+    "supportedClients": [{"client": "WORKFLOWS"}],
     "objectTypes": ["CONTACT", "DEAL", "COMPANY", "TICKET"],
     "inputFields": [
       {
@@ -13,7 +13,7 @@
           "fieldType": "text"
         },
         "isRequired": false,
-        "supportedValueTypes": ["STATIC_VALUE", "OBJECT_PROPERTY"]
+        "supportedValueTypes": ["OBJECT_PROPERTY"]
       }
     ],
     "outputFields": [
@@ -58,7 +58,7 @@
           "contactId": "Contact ID (optional)"
         },
         "inputFieldDescriptions": {
-          "contactId": "The ID of the contact whose name should be normalized. Leave blank when this workflow is enrolled on Contacts — the enrolled contact will be used automatically. Required when enrolled on Deals, Companies, or Tickets: use a property token that holds the associated contact's ID."
+          "contactId": "The ID of the contact whose name should be normalized. Leave blank when this workflow is enrolled on Contacts - the enrolled contact will be used automatically. Required when enrolled on Deals, Companies, or Tickets: use a property token that holds the associated contact's ID."
         },
         "outputFieldLabels": {
           "firstNameUpdated": "First Name Updated",

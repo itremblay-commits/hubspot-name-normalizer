@@ -2,12 +2,22 @@
   "uid": "hubspot-name-normalizer",
   "type": "app",
   "config": {
-    "permittedUrls": {"https://api.hubapi.com"},
     "name": "Name Normalizer",
     "description": "Normalizes contact first and last names to proper case in HubSpot workflows. Intelligently handles O', Mc, Mac, and hyphenated names.",
     "distribution": "private",
+    "permittedUrls": {
+      "fetch": ["https://api.hubapi.com"],
+      "iframe": [],
+      "img": []
+    },
     "auth": {
-      "type": "no_api_access"
+      "type": "static",
+      "requiredScopes": [
+        "crm.objects.contacts.read",
+        "crm.objects.contacts.write"
+      ],
+      "optionalScopes": [],
+      "conditionallyRequiredScopes": []
     }
   }
 }
