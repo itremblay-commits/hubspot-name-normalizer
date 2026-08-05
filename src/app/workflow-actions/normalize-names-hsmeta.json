@@ -3,6 +3,7 @@
   "type": "workflow-action",
   "config": {
     "actionUrl": "https://hubspot-name-normalizer-itremblay-3458s-projects.vercel.app/api/normalize-names",
+    "isPublished": true,
     "supportedClients": [{"client": "WORKFLOWS"}],
     "objectTypes": ["CONTACT", "DEAL", "COMPANY", "TICKET"],
     "inputFields": [
